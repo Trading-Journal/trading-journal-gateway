@@ -1,6 +1,6 @@
 FROM openjdk:17-alpine
 
-EXPOSE 8080
+EXPOSE 8888
 
 ARG Xmx="-Xmx500m"
 ARG Xms="-Xmx500m"
