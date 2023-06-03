@@ -1,4 +1,4 @@
-# Trading Journal Authentication
+# Trading Journal Gateway
 
 ## Change Log
 

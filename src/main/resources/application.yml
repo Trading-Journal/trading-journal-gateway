@@ -1,6 +1,23 @@
 server:
   port: ${PORT:8888}
 
+#Actuator configurations
+management:
+  metrics:
+    tags:
+      environment: ${ENVIRONMENT:local}
+      application: ${spring.application.name}
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include: health, metrics, prometheus
+  endpoint:
+    health:
+      probes:
+        enabled: 'true'
+
+
 spring:
   application:
     name: gateway
