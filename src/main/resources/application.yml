@@ -1,7 +1,6 @@
 server:
   port: ${PORT:8888}
 
-#Actuator configurations
 management:
   metrics:
     tags:
@@ -17,7 +16,6 @@ management:
       probes:
         enabled: 'true'
 
-
 spring:
   application:
     name: gateway
@@ -28,5 +26,11 @@ spring:
           uri: http://trading-journal-authentication
           predicates:
             - Path=/authentication/**
+          filters:
+            - StripPrefix=1
+        - id: entry
+          uri: http://trading-journal-entry
+          predicates:
+            - Path=/entry/**
           filters:
             - StripPrefix=1
