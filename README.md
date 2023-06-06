@@ -2,6 +2,9 @@
 
 ## Change Log
 
+### 1.1.0
+Fully functional gateway for trading journal entry
+
 ### 1.0.0
 Fully functional gateway for trading journal authentication
 
