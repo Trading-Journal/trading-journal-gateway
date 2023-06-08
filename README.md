@@ -2,11 +2,14 @@
 
 ## Change Log
 
+### 1.1.1
+* Add CORS configuration
+
 ### 1.1.0
-Fully functional gateway for trading journal entry
+* Fully functional gateway for trading journal entry
 
 ### 1.0.0
-Fully functional gateway for trading journal authentication
+* Fully functional gateway for trading journal authentication
 
 ## Running
 
