@@ -13,3 +13,9 @@ spring:
             - Path=/authentication/**
           filters:
             - StripPrefix=1
+        - id: entry
+          uri: http://localhost:8081
+          predicates:
+            - Path=/entry/**
+          filters:
+            - StripPrefix=1
