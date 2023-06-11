@@ -10,15 +10,6 @@
         </encoder>
     </appender>
 
-    <appender name="Logstash" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder class="net.logstash.logback.encoder.LogstashEncoder">
-            <provider class="net.logstash.logback.composite.loggingevent.ArgumentsJsonProvider" />
-            <customFields>
-                {"service":"${service}","environment":"${environment}"}
-            </customFields>
-        </encoder>
-    </appender>
-
     <root level="info">
         <appender-ref ref="Console" />
     </root>

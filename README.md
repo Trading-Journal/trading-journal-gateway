@@ -2,6 +2,10 @@
 
 ## Change Log
 
+### 2.0.0
+* Spring 3.1.0
+* Native Image with Build packs
+
 ### 1.1.1
 * Add CORS configuration
 
@@ -24,11 +28,10 @@ Set the active profile as local:
 
 ### Build for deployment
 
-For this option, you must provide your own private and public keys, add it to the image and configure the proper environment variables to read those files
 
-```docker build -t allanweber/trading-journal-gateway:1.0.0 -f docker/Dockerfile .```
+```mvn spring-boot:build-image -Pnative```
 
-Tag your image to latest: ```docker tag allanweber/trading-journal-gateway:1.0.0 allanweber/trading-journal-gateway:latest``` 
+Tag your image to latest: ```docker tag allanweber/trading-journal-gateway:<VERSION> allanweber/trading-journal-gateway:latest``` 
 
 Push image to registry: ```docker push allanweber/trading-journal-gateway:latest```
 
@@ -37,5 +40,5 @@ Push image to registry: ```docker push allanweber/trading-journal-gateway:latest
 * Get postgres container ip: ```docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' CONTAINER_ID```
 
 ```bash
-docker run -p 8888:8888 --name trading-journal-gateway allanweber/trading-journal-gateway:VERSION
+docker run -p 8888:8888 --name trading-journal-gateway allanweber/trading-journal-gateway:<VERSION>
 ```
