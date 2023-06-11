@@ -34,11 +34,6 @@ jobs:
         with:
           distribution: 'zulu'
           java-version: '17'
-      - name: Download Artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: $APP_NAME
-          path: target
       - name: Docker Login
         run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASS }}
       - name: Docker Build Native Image
