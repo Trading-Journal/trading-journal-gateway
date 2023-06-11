@@ -29,7 +29,7 @@ Set the active profile as local:
 ### Build for deployment
 
 
-```.\mvnw  spring-boot:build-image -Pnative```
+```mvn spring-boot:build-image -Pnative```
 
 Tag your image to latest: ```docker tag allanweber/trading-journal-gateway:<VERSION> allanweber/trading-journal-gateway:latest``` 
 
