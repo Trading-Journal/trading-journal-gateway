@@ -48,3 +48,6 @@ spring:
             - Path=/entry/**
           filters:
             - StripPrefix=1
+            - name: RequestSize
+              args:
+                maxSize: 5000000
